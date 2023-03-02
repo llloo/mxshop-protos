@@ -12,6 +12,16 @@ service User {
   rpc createUser(CreateUserInfoRequest) returns (UserInfoResponse) {}
   rpc updateUser(UpdateUserInfoRequest) returns (google.protobuf.Empty) {}
   rpc deleteUser(UserIdRequest) returns (google.protobuf.Empty) {}
+  rpc mobileLogin(MobileLoginRequest) returns (LoginResultResponse) {}
+}
+
+message LoginResultResponse {
+    bool success = 1;
+}
+
+message MobileLoginRequest {
+    string mobile = 1;
+    string rawPassword = 2;
 }
 
 message PageInfoRequest {
