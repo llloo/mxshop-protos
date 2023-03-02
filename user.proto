@@ -17,6 +17,8 @@ service User {
 
 message LoginResultResponse {
     bool success = 1;
+    uint32 userId = 2;
+    string nickName = 3;
 }
 
 message MobileLoginRequest {
