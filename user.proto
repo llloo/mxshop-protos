@@ -21,7 +21,7 @@ message LoginResultResponse {
 
 message MobileLoginRequest {
     string mobile = 1;
-    string rawPassword = 2;
+    string password = 2;
 }
 
 message PageInfoRequest {
